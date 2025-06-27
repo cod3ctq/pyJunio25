@@ -1,0 +1,12 @@
+#Realiza un programa que reciba dos números por teclado e indique cual es mayor o si son iguales
+print("Encontrar el número ENTERO mayor entre dos números")
+print("Ingrese el primer número:")
+numero_1 = int(input())
+print("Ingrese el segundo número:")
+numero_2 = int(input())
+if numero_1 == numero_2:
+    print("El número 1:",numero_1, "es igual a el número 2:", numero_2)
+elif (numero_1 > numero_2):
+    print("El número 1:",numero_1,"es mayor que el número 2:",numero_2)
+else:
+    print("El número 2:",numero_2,"es mayor que el número 1:",numero_1)
