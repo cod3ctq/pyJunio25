@@ -24,9 +24,8 @@ Alex Quijano@DESKTOP-D2VAFCQ MINGW64 ~/Desktop/git/pyJunio25 (develop)
 $ git checkout rama_prueba
 Switched to branch 'rama_prueba'
 
-Alex Quijano@
-
 Muchos paquetes de autoedición y editores de páginas
+
 web usan el Lorem Ipsum como su texto por defecto,
 y al hacer una búsqueda de "Lorem Ipsum" va a dar
 por resultado muchos sitios web que usan este texto si
