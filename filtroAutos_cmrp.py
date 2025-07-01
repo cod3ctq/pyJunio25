@@ -32,8 +32,7 @@ def filtro_autos_deportivos(autos_leidos,ruta_escritura):
 ################
 def filtro_autos_anio(autos_leidos,ruta_escritura):
     for autos in autos_leidos:
-        if autos['AÑO_LANZAMIENTO'] > '2020':
-            print(autos)
+        if int(autos['AÑO_LANZAMIENTO']) >= 2020:
             print(autos)
             agregar_auto(ruta_escritura, autos)
 
@@ -76,7 +75,7 @@ def filtro_autos_promedio(autos_leidos,ruta_escritura):
 ##################
 
 
-opcion = int(input('(1)-->autos depo\n(2)-->autos año\n(3)-->autos electrico/familiar\n(4)-->autos marca\n(5)-->autos promedio'))
+opcion = int(input('(1)-->autos depo\n(2)-->autos año\n(3)-->autos electrico/familiar\n(4)-->autos marca\n(5)-->autos promedio:\n   '))
 
 if opcion == 1:
     filtro_autos_deportivos(autos_leidos,ruta_escritura)
