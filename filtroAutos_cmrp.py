@@ -32,7 +32,7 @@ def filtro_autos_deportivos(autos_leidos,ruta_escritura):
 ################
 def filtro_autos_anio(autos_leidos,ruta_escritura):
     for autos in autos_leidos:
-        if int(autos['AÑO_LANZAMIENTO']) >= 2020:
+        if autos['AÑO_LANZAMIENTO'] >= '2020':
             print(autos)
             agregar_auto(ruta_escritura, autos)
 
@@ -66,11 +66,10 @@ def filtro_autos_promedio(autos_leidos,ruta_escritura):
         if autos['MARCA'] > 'AUDI':
             total = total + int(autos['PRECIO'])
             contador = +1
-    for autos in autos_leidos:
-        if autos['MARCA'] > 'AUDI':
-            autos['PROMEDIO'] = total / contador
-            agregar_auto_promedio(ruta_escritura, autos)
-    print('promedio de marca audi: ', total / contador)
+    for autos2 in autos_leidos:
+        if autos2['MARCA'] > 'AUDI':
+            autos2['PROMEDIO'] = (total / contador)
+            agregar_auto_promedio(ruta_escritura, autos2)
 
 ##################
 
@@ -86,9 +85,7 @@ elif opcion == 3:
 elif opcion == 4:
     filtro_auto_marca(autos_leidos)
 elif opcion == 5:
-    autos = filtro_autos_promedio(autos_leidos,ruta_escritura)
-    agregar_auto_promedio(ruta_escritura, autos)
-
+    filtro_autos_promedio(autos_leidos,ruta_escritura)
 else:
     print('error')
 
